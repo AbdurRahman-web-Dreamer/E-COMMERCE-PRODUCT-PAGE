@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE</title>
+    <!-- fav icon  -->
+     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/6d79a55aca.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+     <!-- header section  -->
+      <header class="container mx-auto">
+        <div class="navbar border-b-2 pb-6">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-28 p-2 shadow ">
+                  <li><a>Collections</a></li>
+                  <li>
+                    <a>Men</a>
+                  </li>
+                  <li><a>Women</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-3xl md:text-5xl font-extrabold">Sneakers</a>
+
+              <div class="navbar-center hidden lg:flex ">
+                <ul class="menu menu-horizontal pt-5">
+                  <li><a>Collections</a></li>
+                  <li>
+                    <a>Men</a>
+                  </li>
+                  <li><a>Women</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+            </div>
+           
+            <div class="navbar-end  gap-5">
+                <img src="images/icon-cart.svg" alt="">
+                 <img class="w-10" src="images/image-avatar.png" alt="">
+            </div>
+          </div>
+      </header>
+      
+      <!-- main section  -->
+       <main class="container mx-auto" >
+           <div class="product-container">
+                <div class="left-side">
+                      <img src="images/image-product-1.jpg" alt="">
+                    <div class="img-container">
+                        <img src="images/image-product-1-thumbnail.jpg" alt="">
+                        <img src="images/image-product-2-thumbnail.jpg" alt="">
+                        <img src="images/image-product-3-thumbnail.jpg" alt="">
+                        <img src="images/image-product-4-thumbnail.jpg" alt="">
+                    </div>
+                </div>
+                <div class="right-side space-y-3">
+                       <p class="name-of-company">SNEAKERS COMPANY</p>
+                       <h2 class="product-title">Fall Limited Edition <br> Sneakers</h2>
+                       <p class="product-description">
+                         These low-profile sneakers are you perfect casual wear companion .Featuring a double rubber outer sole, they II withstand everything the weather can offer
+                       </p>
+                       <h3 class="price">$125.00<span class="discount">50%</span></h3>
+                       <h3 class="previous-price">
+                          <del>$250.00</del>
+                       </h3>
+
+                       <div class="btn-sector ">
+                           
+                            <div class=" bg-slate-100 rounded-md ">
+                              
+                                <div class="flex items-center space-x-4">
+                                    <button id="decrease" class="text-orange-500 px-4 py-2 rounded  font-medium text-3xl"><i class="fa-solid fa-minus"></i></button>
+                                    <input id="quantity" type="text" class="w-6 bg-transparent text-center font-semibold text-2xl" value="1" readonly>
+                                    <button id="increase" class=" text-orange-500 px-4 py-2 rounded  font-medium text-3xl"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                           
+                           <button class="button">Add to cart</button>
+                       </div>
+                </div>
+           </div>
+       </main>
+     
+    
+    <script>
+        // JavaScript for handling product quantity increase and decrease
+        const decreaseBtn = document.getElementById('decrease');
+        const increaseBtn = document.getElementById('increase');
+        const quantityInput = document.getElementById('quantity');
+    
+        let quantity = 1;
+    
+        decreaseBtn.addEventListener('click', function() {
+            if (quantity > 1) {
+                quantity--;
+                quantityInput.value = quantity;
+            }
+        });
+    
+        increaseBtn.addEventListener('click', function() {
+            quantity++;
+            quantityInput.value = quantity;
+        });
+    </script>
+</body>
+</html>
